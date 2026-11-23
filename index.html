@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FBF6EF">
+<title>Universo del Quilling – Corso online in italiano</title>
+<meta name="description" content="Impara il Quilling da zero con 10 videolezioni in italiano. Crea quadretti, fiori, biglietti e decorazioni di Natale con strisce di carta.">
+<meta name="robots" content="index,follow">
+<!-- Quando tiver o domínio: <link rel="canonical" href="https://SEU-DOMINIO/"> e troque og:image por URL absoluta -->
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Universo del Quilling – Corso online in italiano">
+<meta property="og:description" content="10 videolezioni passo passo per creare opere in Quilling, anche partendo da zero.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="it_IT">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+<link rel="preload" as="image" href="assets/videohero-poster.webp" fetchpriority="high">
+
+<!-- ===== META PIXEL: colar o código do Pixel aqui ===== -->
+
+<style>
+:root{
+  --bg:#FBF6EF; --bg2:#F4EADF; --card:#FFFFFF; --paper:#FFFDF9;
+  --ink:#2B211D; --muted:#6E5D53; --line:#E7DACB;
+  --theme:#A64B2A; --theme-soft:#F6E3D9;
+  --sage:#4F6E55; --sage-soft:#E4ECE3;
+  --cta:#1F9D55; --cta-hover:#178446; --cta-shadow:#106b37;
+  --wine:#8E2A25; --gold:#E9B23A;
+  /* cores das tiras de papel */
+  --s1:#E8A0B4; --s2:#E46F5A; --s3:#F2C14E; --s4:#7FA77F; --s5:#6FA8C7; --s6:#A88BC7;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:84px;overflow-x:hidden}
+img,video{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:800;line-height:1.12;letter-spacing:-.015em}
+h1{font-size:clamp(31px,7.6vw,48px)}
+h2{font-size:clamp(27px,6.2vw,40px)}
+h3{font-size:21px}
+em.it{font-style:italic;font-weight:600;color:var(--theme)}
+.wrap{max-width:620px;margin:0 auto;padding:0 16px}
+.wide{max-width:1000px}
+section{padding:60px 0;position:relative}
+.alt{background:var(--bg2)}
+.dark{background:#2B211D;color:#FBF6EF}
+.dark em.it{color:var(--gold)}
+.center{text-align:center}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.mt{margin-top:20px}
+
+/* ---------- Ícones (SVG próprios) ---------- */
+.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+
+/* ---------- Tiras de papel (assinatura visual) ---------- */
+.strips{height:8px;background:linear-gradient(90deg,var(--s1) 0 16.6%,var(--s2) 0 33.3%,var(--s3) 0 50%,var(--s4) 0 66.6%,var(--s5) 0 83.3%,var(--s6) 0)}
+.strips.thin{height:4px}
+.label{display:inline-flex;align-items:center;gap:8px;font:700 12.5px/1 Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--theme);margin-bottom:14px}
+.label .ic{width:20px;height:20px;stroke-width:1.8}
+.dark .label{color:var(--gold)}
+.sec-head{text-align:center;margin-bottom:30px}
+.sec-head p{margin-top:12px;color:var(--muted)}
+.dark .sec-head p{color:#d8c8bb}
+
+/* ---------- Topbar ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:var(--wine);color:#fff;text-align:center;font:600 13.5px/1.35 Inter;padding:9px 12px}
+.topbar b{font-variant-numeric:tabular-nums;background:rgba(0,0,0,.25);padding:2px 7px;border-radius:6px;margin-left:4px}
+
+/* ---------- Buttons ---------- */
+.btn{display:block;width:100%;text-align:center;text-decoration:none;cursor:pointer;border:0;
+  background:var(--cta);color:#fff;font:800 18px/1.2 Inter;text-transform:uppercase;letter-spacing:.02em;
+  padding:19px 18px;border-radius:14px;box-shadow:0 5px 0 var(--cta-shadow),0 10px 24px rgba(31,157,85,.28);transition:transform .1s,background .2s}
+.btn:hover{background:var(--cta-hover)}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--cta-shadow)}
+.btn small{display:block;font:500 13px/1.3 Inter;text-transform:none;letter-spacing:0;opacity:.92;margin-top:4px}
+.btn.ghost{background:transparent;color:var(--muted);box-shadow:none;border:1.5px solid var(--line);font-size:15px;padding:15px}
+.pulse{animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.022)}}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-top:14px;font-size:13px;color:var(--muted)}
+.trust span{display:inline-flex;align-items:center;gap:5px}
+.trust .ic{width:16px;height:16px;color:var(--cta);stroke-width:2}
+
+/* ---------- Hero ---------- */
+.hero{padding:22px 0 52px}
+.hero-logo{display:block;width:auto;height:52px;margin:0 auto 20px}
+.hero .label{display:flex;justify-content:center}
+.hero h1{text-align:center}
+.hero .sub{text-align:center;margin-top:16px;font-size:18px;color:#4a3b34}
+.hero-media{margin:24px 0;border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 44px rgba(43,33,29,.2);background:#eee;aspect-ratio:4/5;position:relative;border:6px solid #fff}
+.hero-media video{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.checks{list-style:none;display:grid;gap:11px;margin:0 0 24px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.checks .ic{color:var(--theme);margin-top:1px}
+.proof{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;font-size:14px;color:var(--muted)}
+.avatars{display:flex}
+.avatars img{width:34px;height:34px;border-radius:50%;border:2px solid var(--bg);margin-left:-10px;object-fit:cover}
+.avatars img:first-child{margin-left:0}
+.proof b{color:var(--ink)}
+
+/* ---------- Vitrine (marquee) ---------- */
+.gallery-sec{overflow:hidden}
+.mq{overflow:hidden;padding:10px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.mq+.mq{margin-top:4px}
+.mq-track{display:flex;gap:16px;width:max-content;animation:mq var(--dur,60s) linear infinite}
+.mq.rev .mq-track{animation-direction:reverse}
+.mq:hover .mq-track,.mq.hold .mq-track,.mq.off .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(calc(-50% - 8px))}}
+.mq-item{position:relative;flex:0 0 auto;margin:0;background:#fff;padding:7px 7px 34px;box-shadow:0 8px 22px rgba(43,33,29,.15);cursor:zoom-in;transition:transform .25s;border-radius:4px}
+.mq-item:nth-child(odd){transform:rotate(-1.2deg)}
+.mq-item:nth-child(even){transform:rotate(1deg)}
+.mq-item:hover{transform:translateY(-4px) rotate(0)}
+.mq-item img{height:240px;width:auto;max-width:none;display:block}
+.mq-item figcaption{position:absolute;left:0;right:0;bottom:9px;text-align:center;font:italic 600 14px/1 Fraunces;color:var(--ink)}
+.tap-hint{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;color:var(--muted);margin-top:18px;font-weight:500}
+.tap-hint .ic{width:18px;height:18px}
+
+/* ---------- Lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:120;background:rgba(22,16,13,.95);display:none;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 20px}
+.lb.open{display:flex;animation:fade .2s}
+@keyframes fade{from{opacity:0}}
+.lb-img{max-width:100%;max-height:calc(100vh - 230px);width:auto;height:auto;background:#fff;padding:7px;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb-cap{color:#fff;font:italic 600 20px/1.3 Fraunces;margin:16px 0 2px;text-align:center}
+.lb-count{color:#bfb0a5;font-size:13px;margin-bottom:14px}
+.lb .btn{max-width:420px}
+.lb-close{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;cursor:pointer;display:grid;place-items:center}
+.lb-nav{position:absolute;top:42%;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.lb-prev{left:10px}.lb-next{right:10px}
+
+/* ---------- Processo (frames reais) ---------- */
+.proc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.proc figure{margin:0;position:relative}
+.proc img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;box-shadow:0 8px 20px rgba(43,33,29,.14)}
+.proc .n{position:absolute;top:10px;left:10px;width:34px;height:34px;border-radius:50%;background:#fff;color:var(--theme);font:800 17px/34px Fraunces;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.proc figcaption{font-size:14.5px;font-weight:600;margin-top:10px;line-height:1.35}
+.proc figcaption span{display:block;font-weight:400;color:var(--muted);font-size:13.5px;margin-top:2px}
+.method{margin-top:36px;display:grid;gap:22px;align-items:center}
+.method img{border-radius:var(--radius);border:6px solid #fff;box-shadow:0 12px 30px rgba(43,33,29,.16);max-width:360px;margin:0 auto;transform:rotate(-1.5deg)}
+.method h3{font-size:28px;margin-bottom:10px}
+.method p+p{margin-top:12px}
+
+/* ---------- Pick (domanda interattiva) ---------- */
+.pick{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pick button{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:0 0 12px;font:600 14px/1.3 Inter;color:var(--ink);cursor:pointer;transition:all .18s;text-align:center;overflow:hidden;position:relative}
+.pick button img{width:100%;aspect-ratio:1/1;object-fit:cover;margin-bottom:10px;transition:transform .3s}
+.pick button:hover{border-color:var(--theme);transform:translateY(-2px)}
+.pick button:hover img{transform:scale(1.04)}
+.pick button.on{border-color:var(--cta);box-shadow:0 8px 22px rgba(31,157,85,.22)}
+.pick button.on::after{content:"";position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;background:var(--cta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/16px no-repeat}
+.pick-answer{margin-top:20px;animation:pop .3s ease-out}
+.pick-bubble{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:4px 18px 18px 18px;padding:16px;margin-bottom:16px;box-shadow:0 6px 18px rgba(43,33,29,.08)}
+.pick-bubble img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:0 0 44px}
+.pick-bubble b{display:block;font-size:14px;margin-bottom:2px}
+.pick-bubble p{font-size:15.5px}
+
+/* ---------- Dolore ---------- */
+.pain{list-style:none;display:grid;gap:14px}
+.pain li{font:italic 600 19px/1.4 Fraunces;color:#4a3b34;padding-left:20px;border-left:3px solid var(--s2)}
+.pain li:nth-child(2){border-color:var(--s3)}.pain li:nth-child(3){border-color:var(--s5)}.pain li:nth-child(4){border-color:var(--s6)}
+.relief{margin-top:32px;background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:0 10px 28px rgba(43,33,29,.08);position:relative;overflow:hidden}
+.relief::before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:linear-gradient(90deg,var(--s1) 0 16.6%,var(--s2) 0 33.3%,var(--s3) 0 50%,var(--s4) 0 66.6%,var(--s5) 0 83.3%,var(--s6) 0)}
+.relief h3{color:var(--sage);margin-bottom:8px;font-size:24px}
+
+/* ---------- App mockup (cosa c'è dentro) ---------- */
+.app{background:var(--card);border-radius:26px;box-shadow:0 20px 50px rgba(43,33,29,.16);overflow:hidden;border:1px solid var(--line)}
+.app-top{background:#2B211D;color:#fff;padding:18px 20px;display:flex;align-items:center;gap:12px}
+.app-top img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.app-top b{display:block;font:800 17px/1.2 Fraunces}
+.app-top span{font-size:12.5px;color:#cdbdb1}
+.app-row{display:flex;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);align-items:flex-start}
+.app-row:last-child{border-bottom:0}
+.app-ico{flex:0 0 42px;height:42px;border-radius:12px;background:var(--theme-soft);color:var(--theme);display:grid;place-items:center}
+.app-row h3{font:700 16px/1.3 Inter;margin-bottom:2px}
+.app-row p{font-size:14.5px;color:var(--muted);line-height:1.45}
+.tag-c{display:inline-block;font:700 9.5px/1 Inter;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:#3b2a00;padding:4px 6px;border-radius:4px;vertical-align:2px;margin-left:4px}
+
+/* ---------- Material ---------- */
+.mats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.mats div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 12px;font-weight:600;font-size:14.5px;line-height:1.3;display:flex;flex-direction:column;align-items:center;gap:10px}
+.mats .ic{width:40px;height:40px;color:var(--theme);stroke-width:1.4}
+.browser{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 16px 40px rgba(43,33,29,.16);border:1px solid var(--line);max-width:520px;margin:0 auto}
+.browser-bar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:#F1ECE6;border-bottom:1px solid var(--line)}
+.browser-bar>span{width:10px;height:10px;border-radius:50%;background:#E46F5A}
+.browser-bar>span:nth-child(2){background:#F2C14E}.browser-bar>span:nth-child(3){background:#7FA77F}
+.browser-url{flex:1;margin-left:8px;background:#fff;border-radius:99px;padding:5px 12px;font:500 13px/1 Inter;color:var(--muted);display:flex;align-items:center;gap:6px}
+.browser-url .ic{width:13px;height:13px;color:var(--sage)}
+.browser img{width:100%;padding:10px 14px 0}
+.browser img+img{padding:4px 14px 14px}
+.calc-line{text-align:center;margin:22px 0 4px;font-size:16px}
+.calc-line b{background:var(--cta);color:#fff;padding:4px 10px;border-radius:99px;white-space:nowrap}
+.price-pill{display:inline-block;background:var(--cta);color:#fff;font:800 15px/1 Inter;padding:8px 12px;border-radius:99px}
+
+/* ---------- Natale ---------- */
+.xmas{display:grid;gap:26px;align-items:center}
+.xmas img{border-radius:6px;border:7px solid #fff;max-width:300px;margin:0 auto;transform:rotate(2deg);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+
+/* ---------- Testimonials ---------- */
+.tests{display:grid;gap:14px}
+.test{background:var(--card);border-radius:18px;padding:22px 20px 18px;position:relative;box-shadow:0 6px 18px rgba(43,33,29,.06)}
+.test::before{content:"\201C";position:absolute;top:-8px;right:16px;font:800 72px/1 Fraunces;color:var(--theme-soft)}
+.test p{font-size:16px;position:relative}
+.test-top{display:flex;align-items:center;gap:12px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.test-top img{width:42px;height:42px;border-radius:50%;object-fit:cover}
+.test-name{font-weight:700;font-size:15px}
+.stars{display:flex;gap:2px;color:var(--gold)}
+.stars .ic{width:14px;height:14px;fill:currentColor;stroke:none}
+.tests.collapsed .test:nth-child(n+4){display:none}
+.more-btn{display:block;margin:18px auto 0;background:none;border:1.5px solid var(--theme);color:var(--theme);font:700 15px/1 Inter;padding:13px 22px;border-radius:99px;cursor:pointer}
+
+/* ---------- Bonus (cupom) ---------- */
+.bonus{display:flex;background:var(--card);border-radius:16px;box-shadow:0 6px 18px rgba(43,33,29,.08);overflow:hidden;position:relative}
+.bonus+.bonus{margin-top:14px}
+.bonus-side{flex:0 0 74px;background:var(--theme);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;position:relative;font:800 11px/1 Inter;letter-spacing:.12em}
+.bonus-side .ic{width:28px;height:28px}
+.bonus-side::after{content:"";position:absolute;right:-1px;top:0;bottom:0;width:2px;background:repeating-linear-gradient(var(--card) 0 6px,transparent 6px 12px)}
+.bonus:nth-child(2) .bonus-side{background:var(--sage)}
+.bonus:nth-child(3) .bonus-side{background:#B9852A}
+.bonus:nth-child(4) .bonus-side{background:#5E7FA0}
+.bonus-body{padding:16px 16px 14px}
+.bonus h3{font-size:19px;margin-bottom:4px}
+.bonus p{font-size:14.5px;color:var(--muted);line-height:1.45}
+.bonus-val{margin-top:10px;font-weight:700;font-size:14px}
+.bonus-val s{color:var(--muted);font-weight:500}
+.bonus-val b{color:var(--cta)}
+
+/* ---------- Value stack ---------- */
+.stack{background:var(--paper);border-radius:6px;padding:26px 22px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(43,33,29,.1);position:relative}
+.stack::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--s1) 0 16.6%,var(--s2) 0 33.3%,var(--s3) 0 50%,var(--s4) 0 66.6%,var(--s5) 0 83.3%,var(--s6) 0)}
+.stack-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.stack-row span:last-child{white-space:nowrap;color:var(--muted);text-decoration:line-through}
+.stack-total{text-align:center;padding-top:18px}
+.stack-total .from{color:var(--muted)}
+.stack-total .from s{color:var(--wine)}
+.stack-total .to{font:800 50px/1.1 Fraunces;color:var(--cta)}
+
+/* ---------- Pricing ---------- */
+.plans{display:grid;gap:20px}
+.plan{background:var(--card);border-radius:20px;padding:26px 20px;border:1.5px solid var(--line);position:relative}
+.plan.best{border:0;box-shadow:0 0 0 3px var(--cta),0 20px 48px rgba(31,157,85,.22);order:-1;overflow:hidden;padding-top:34px}
+.plan.best::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg,var(--s1) 0 16.6%,var(--s2) 0 33.3%,var(--s3) 0 50%,var(--s4) 0 66.6%,var(--s5) 0 83.3%,var(--s6) 0)}
+.plan-badge{display:table;margin:0 auto 12px;background:var(--cta);color:#fff;font:800 11.5px/1 Inter;letter-spacing:.12em;padding:8px 14px;border-radius:99px}
+.plan-name{font:800 12.5px/1 Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center}
+.plan.best .plan-name{color:var(--cta)}
+.plan-img{margin:16px auto 4px;max-width:74%;border-radius:14px;overflow:hidden;opacity:.9}
+.plan-img img{width:100%}
+.plan.best .plan-img{max-width:none;margin:16px -6px 4px;opacity:1;box-shadow:0 10px 26px rgba(43,33,29,.12)}
+.plan h3{text-align:center;margin-top:8px}
+.plan-price{text-align:center;margin:14px 0 4px}
+.plan-price s{color:var(--muted);font-size:17px}
+.plan-price .amt{display:block;font:800 58px/1 Fraunces;color:var(--ink)}
+.plan.best .plan-price .amt{color:var(--cta)}
+.plan-price .amt sup{font-size:26px;vertical-align:top;margin-left:2px}
+.plan-note{text-align:center;font-size:13px;color:var(--muted);margin-bottom:18px}
+.plan ul{list-style:none;display:grid;gap:10px;margin-bottom:22px}
+.plan li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.4}
+.plan li .ic{width:18px;height:18px;color:var(--cta);stroke-width:2.4;margin-top:1px}
+.plan li.gift .ic{color:var(--theme);stroke-width:1.8}
+.plan li.no{color:#ad9f95;text-decoration:line-through}
+.plan li.no .ic{color:#cdbdb1}
+.save{background:#FFF6D6;border:1px solid #F0D676;border-radius:10px;padding:11px;font-size:14px;text-align:center;margin-bottom:16px}
+.secure{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:14px;font-size:12.5px;color:var(--muted)}
+.secure .ic{width:15px;height:15px}
+.deliver{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:26px;text-align:center;font-size:13px;color:var(--muted);line-height:1.3}
+.deliver .ic{width:28px;height:28px;color:var(--theme);margin:0 auto 6px;stroke-width:1.5}
+
+/* ---------- Guarantee ---------- */
+.guar{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.seal{width:170px;height:170px;position:relative}
+.seal svg{width:100%;height:100%}
+.seal-ring{animation:spin 24s linear infinite;transform-origin:50% 50%}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- Compare ---------- */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;background:var(--card);border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.cmp th,.cmp td{padding:11px 6px;text-align:center;border-bottom:1px solid var(--line)}
+.cmp th{font-size:12.5px;background:#f7efe5}
+.cmp td:first-child,.cmp th:first-child{text-align:left;padding-left:12px}
+.cmp .us{background:#EAF7EF;font-weight:700}
+.cmp th.us{background:var(--cta);color:#fff}
+.cmp tr:last-child td{border-bottom:0}
+.cmp .ic{width:18px;height:18px;margin:0 auto;stroke-width:2.6}
+.y{color:var(--cta)}.n{color:#c0574a}
+
+/* ---------- Author ---------- */
+.author-photo{width:210px;height:210px;margin:0 auto 20px;position:relative}
+.author-photo::before{content:"";position:absolute;inset:-10px;border-radius:50%;background:conic-gradient(var(--s1),var(--s2),var(--s3),var(--s4),var(--s5),var(--s6),var(--s1))}
+.author-photo img{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;border:6px solid var(--bg2)}
+.prose p+p{margin-top:12px}
+.sign{font:italic 600 26px/1 Fraunces;color:var(--theme);margin-top:16px}
+
+/* ---------- FAQ ---------- */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:17px 50px 17px 18px;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:16px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--theme-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A64B2A' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/13px no-repeat;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 18px 18px;color:var(--muted);font-size:15.5px}
+
+/* ---------- Final ---------- */
+.recap{list-style:none;display:grid;gap:10px;margin:22px 0 26px;text-align:left}
+.recap li{display:flex;gap:10px;align-items:flex-start}
+.recap .ic{color:#7ee2a8;width:20px;height:20px;stroke-width:2.4;margin-top:2px}
+
+/* ---------- Footer ---------- */
+footer{padding:32px 0 20px;font-size:12px;color:var(--muted);text-align:center}
+footer p+p{margin-top:10px}
+footer nav{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+
+/* ---------- Sticky CTA ---------- */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(251,246,239,.97);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky .btn{max-width:588px;margin:0 auto;padding:15px;font-size:16px}
+
+/* ---------- Modal (downsell) ---------- */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(30,22,18,.72);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.modal-box{background:var(--bg);border-radius:20px;max-width:440px;width:100%;padding:0 20px 24px;text-align:center;animation:pop .25s ease-out;overflow:hidden}
+.modal-box .strips{margin:0 -20px 22px}
+@keyframes pop{from{transform:scale(.92);opacity:0}}
+.modal-box h3{font-size:26px;margin-bottom:10px}
+.modal-img{width:62%;margin:-6px auto 12px;border-radius:12px}
+.modal-box{max-height:calc(100vh - 32px);overflow-y:auto}
+.modal-box ul{list-style:none;text-align:left;margin:16px 0 20px;display:grid;gap:9px;font-size:15px}
+.modal-box li{display:flex;gap:10px;align-items:flex-start}
+.modal-box li .ic{width:20px;height:20px;color:var(--theme)}
+.modal-box .btn.ghost{margin-top:10px}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.mq-track,.pulse,.seal-ring{animation:none}}
+
+@media(min-width:860px){
+  body{padding-bottom:0}
+  .sticky{display:none}
+  .plans{grid-template-columns:1fr 1fr;align-items:center}
+  .plan.best{order:0}
+  .tests{grid-template-columns:1fr 1fr}
+  .mq-item img{height:290px}
+  .pick{grid-template-columns:1fr 1fr 1fr}
+  .proc{grid-template-columns:repeat(4,1fr)}
+  .method{grid-template-columns:1fr 1.2fr}
+  .xmas{grid-template-columns:1fr 1.2fr;text-align:left}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ ÍCONES ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-coil" viewBox="0 0 24 24"><path d="M11.4 12a1.3 1.3 0 0 1 2.6 0 2.6 2.6 0 0 1-5.2 0 3.9 3.9 0 0 1 7.8 0 5.2 5.2 0 0 1-10.4 0 6.5 6.5 0 0 1 13 0" stroke-width="1.3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.2v5.6l4.6-2.8z"/></symbol>
+  <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><rect x="7" y="7" width="10" height="10"/><path d="M9.5 14.5c1-2 2-3 2.5-3s1.5 1 2.5 3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.2-1-1.6-1-2.6 0-.9.7-1.6 1.7-1.6H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1.1"/><circle cx="10" cy="7.3" r="1.1"/><circle cx="14.5" cy="7.3" r="1.1"/></symbol>
+  <symbol id="i-euro" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.6A4.2 4.2 0 0 0 9 10.2v3.6a4.2 4.2 0 0 0 6.5 1.6M7.5 11h5.5M7.5 13.2h5.5"/></symbol>
+  <symbol id="i-inf" viewBox="0 0 24 24"><path d="M12 12c-1.8-2.4-3.3-3.6-5-3.6a3.6 3.6 0 0 0 0 7.2c1.7 0 3.2-1.2 5-3.6zm0 0c1.8 2.4 3.3 3.6 5 3.6a3.6 3.6 0 0 0 0-7.2c-1.7 0-3.2 1.2-5 3.6z"/></symbol>
+  <symbol id="i-strips" viewBox="0 0 24 24"><path d="M3 6c3-2 6 2 9 0s6 2 9 0M3 12c3-2 6 2 9 0s6 2 9 0M3 18c3-2 6 2 9 0s6 2 9 0"/></symbol>
+  <symbol id="i-glue" viewBox="0 0 24 24"><path d="M11 2.5h2l.6 4h-3.2z"/><path d="M9 6.5h6l1 3v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-10z"/><path d="M10 13h4"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.5 9.5l7-7"/><path d="M19 2.5l2.5 2.5"/><path d="M3.5 20.5l4-4"/><rect x="6" y="9.5" width="5" height="9" rx="2.2" transform="rotate(45 8.5 14)"/></symbol>
+  <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6.5" r="3"/><circle cx="6" cy="17.5" r="3"/><path d="M8.5 8.2L20 18M8.5 15.8L20 6"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5v8h14v-8M12 8.5v12"/><path d="M12 8.5C10.5 5 7 4.5 7 6.5s3 2 5 2zm0 0c1.5-3.5 5-4 5-2s-3 2-5 2z"/></symbol>
+  <symbol id="i-template" viewBox="0 0 24 24"><path d="M6 2.5h9l4 4v15H6z"/><path d="M15 2.5v4h4"/><path d="M9.5 16c0-3 1.5-5 3-5s2.5 1.5 2.5 3-1 2-2 2-1.5-.8-1.5-1.6" stroke-dasharray="1.6 1.6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5h16v10H10l-4.5 4v-4H4z"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" stroke-width="2.4"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2"/><rect x="8" y="5.5" width="8" height="4" rx=".5"/><path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 16.5h.01M12 16.5h.01M15.5 16.5h.01" stroke-width="2.4"/></symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 9.5l1.5-5h13L20 9.5"/><path d="M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12v8.5h13V12M10 20.5v-5h4v5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-touch" viewBox="0 0 24 24"><path d="M9 11V5a1.5 1.5 0 0 1 3 0v5.5M12 10V8.5a1.5 1.5 0 0 1 3 0V11M15 10.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-.5a6 6 0 0 1-4.7-2.3L4.5 15.5a1.5 1.5 0 0 1 2.3-1.9L9 16"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
+
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">Prezzo di lancio valido solo oggi, <span data-today>oggi</span> · scade tra <b id="timer">--:--:--</b></div>
+<div class="strips thin"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="assets/logo.webp" alt="Universo del Quilling" width="480" height="178" fetchpriority="high">
+    <h1>Crea la tua prima <em class="it">opera in Quilling</em> in pochi giorni, anche se non hai mai fatto lavori manuali</h1>
+    <p class="sub">Con strisce di carta, un po' di colla e <strong>10 videolezioni passo passo</strong>, impari a creare quadretti, fiori, biglietti e decorazioni di Natale che sembrano fatti da un'artista. A casa tua, con i tuoi tempi, spendendo pochissimo.</p>
+
+    <div class="hero-media">
+      <video id="heroVideo" data-src="assets/videohero-web.mp4" poster="assets/videohero-poster.webp" width="576" height="720" autoplay muted loop playsinline disablepictureinpicture preload="none" aria-label="Mani che creano una peonia in Quilling"></video>
+    </div>
+
+    <ul class="checks">
+      <li><svg class="ic"><use href="#i-coil"/></svg>10 videolezioni in italiano, dal primo rotolino alla rifinitura</li>
+      <li><svg class="ic"><use href="#i-coil"/></svg>Metodo con modelli: incolli ogni striscia al suo posto, come completare un disegno</li>
+      <li><svg class="ic"><use href="#i-coil"/></svg>Un kit di materiale basta per circa 90 opere</li>
+      <li><svg class="ic"><use href="#i-coil"/></svg>Accesso immediato, dal telefono o dal computer</li>
+    </ul>
+
+    <a href="#offerta" class="btn pulse">Voglio iniziare ora<small>Pagamento unico · Accesso immediato</small></a>
+    <div class="trust">
+      <span><svg class="ic"><use href="#i-shield"/></svg>Garanzia 30 giorni</span>
+      <span><svg class="ic"><use href="#i-lock"/></svg>Pagamento sicuro</span>
+      <span><svg class="ic"><use href="#i-check"/></svg>Nessun abbonamento</span>
+    </div>
+
+    <div class="proof">
+      <div class="avatars">
+        <img decoding="async" src="assets/dep-juliana.webp" alt="" width="34" height="34"><img decoding="async" src="assets/dep-camila.webp" alt="" width="34" height="34"><img decoding="async" src="assets/dep-debora.webp" alt="" width="34" height="34"><img decoding="async" src="assets/dep-marcela.webp" alt="" width="34" height="34">
+      </div>
+      <div>Già scelto da <b>oltre 3.000 alunne</b></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ GALLERIA (as imagens ficam na lista GALLERY no script, no fim da página) ============ -->
+<section class="alt gallery-sec">
+  <div class="strips" style="position:absolute;top:0;left:0;right:0"></div>
+  <div class="wrap sec-head">
+    <div class="label"><svg class="ic"><use href="#i-coil"/></svg>Cosa imparerai a creare</div>
+    <h2>Tutto questo nasce da <em class="it">semplici strisce di carta</em></h2>
+    <p>Quadretti decorativi e religiosi, lettere e nomi, biglietti, inviti, portachiavi e bomboniere.</p>
+  </div>
+  <div class="mq" id="mq1"><div class="mq-track"></div></div>
+  <div class="mq rev" id="mq2"><div class="mq-track"></div></div>
+  <p class="tap-hint"><svg class="ic"><use href="#i-touch"/></svg>Tocca un'opera per vederla da vicino</p>
+</section>
+
+<!-- ============ INTERAZIONE: PRIMA OPERA ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label"><svg class="ic"><use href="#i-coil"/></svg>Una domanda veloce</div>
+      <h2>Qual è la <em class="it">prima opera</em> che vuoi creare?</h2>
+      <p>Tocca quella che ti piace di più.</p>
+    </div>
+    <div class="pick" id="pick">
+      <button type="button" data-k="natale"><img decoding="async" src="assets/pick-natale.webp" alt="" width="440" height="440" loading="lazy">Decorazioni di Natale</button>
+      <button type="button" data-k="nomi"><img decoding="async" src="assets/pick-nomi.webp" alt="" width="440" height="440" loading="lazy">Quadretti con il nome</button>
+      <button type="button" data-k="bomb"><img decoding="async" src="assets/pick-biglietti.webp" alt="" width="440" height="440" loading="lazy">Bomboniere e biglietti</button>
+      <button type="button" data-k="relig"><img decoding="async" src="assets/pick-religioso.webp" alt="" width="440" height="440" loading="lazy">Quadretti religiosi</button>
+      <button type="button" data-k="fiori"><img decoding="async" src="assets/pick-fiori.webp" alt="" width="440" height="440" loading="lazy">Fiori in cornice</button>
+      <button type="button" data-k="vend"><img decoding="async" src="assets/peca-08.webp" alt="" width="540" height="675" loading="lazy">Piccole opere da vendere</button>
+    </div>
+    <div class="pick-answer" id="pickAnswer" hidden>
+      <div class="pick-bubble">
+        <img decoding="async" src="assets/larissa.webp" alt="" width="44" height="44">
+        <div><b>Larissa</b><p id="pickText"></p></div>
+      </div>
+      <a href="#offerta" class="btn pulse">Voglio iniziare ora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOLORE ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label"><svg class="ic"><use href="#i-coil"/></svg>Ti riconosci?</div>
+      <h2>Forse ti è già successo…</h2>
+    </div>
+    <ul class="pain">
+      <li>Vedi lavori bellissimi su Instagram e pensi: "io non ci riuscirei mai".</li>
+      <li>Hai provato con qualche video su YouTube, ma andava troppo veloce, era in un'altra lingua e saltava proprio i passaggi importanti.</li>
+      <li>Vorresti un hobby tutto tuo per staccare dalla routine, ma non sai da dove cominciare.</li>
+      <li>A ogni Natale, battesimo o comunione spendi un patrimonio in regali e bomboniere tutte uguali.</li>
+    </ul>
+    <div class="relief">
+      <h3>Respira. Il problema non sei tu.</h3>
+      <p>La creatività non ti è mai mancata. Ti è mancato un <strong>metodo semplice, in italiano, mostrato dall'inizio alla fine</strong>. È esattamente quello che trovi nell'Universo del Quilling.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESSO + METODO ============ -->
+<section>
+  <div class="wrap wide">
+    <div class="sec-head">
+      <div class="label"><svg class="ic"><use href="#i-coil"/></svg>Come nasce un'opera</div>
+      <h2>Dalla striscia di carta <em class="it">all'opera in cornice</em></h2>
+      <p>Ecco come nasce una stella di Natale, in quattro passaggi.</p>
+    </div>
+    <div class="proc">
+      <figure><span class="n">1</span><img decoding="async" src="assets/etapa1.webp" alt="Mani che arrotolano una striscia di carta rossa con l'attrezzo per Quilling" loading="lazy" width="560" height="696"><figcaption>Modelli la striscia<span>con l'attrezzo, in pochi secondi</span></figcaption></figure>
+      <figure><span class="n">2</span><img decoding="async" src="assets/etapa2.webp" alt="Petali rossi incollati sul modello stampato della stella di Natale" loading="lazy" width="560" height="696"><figcaption>La incolli sul modello<span>nel punto indicato</span></figcaption></figure>
+      <figure><span class="n">3</span><img decoding="async" src="assets/etapa3.webp" alt="Rifinitura del centro dorato con la pinzetta" loading="lazy" width="560" height="696"><figcaption>Rifinisci i dettagli<span>con la pinzetta</span></figcaption></figure>
+      <figure><span class="n">4</span><img decoding="async" src="assets/etapa4.webp" alt="Stella di Natale in Quilling finita, in cornice" loading="lazy" width="560" height="696"><figcaption>La incornici<span>pronta da appendere o regalare</span></figcaption></figure>
+    </div>
+
+    <div class="method">
+      <img decoding="async" src="assets/moldes.webp" alt="Albero di Natale in Quilling montato sopra un modello stampato" width="474" height="632" loading="lazy">
+      <div class="prose">
+        <div class="label"><svg class="ic"><use href="#i-template"/></svg>Il metodo dei modelli</div>
+        <h3>Serve essere portata? <em class="it">No.</em></h3>
+        <p>Lavori sopra un <strong>modello stampato</strong>: arrotoli e modelli le strisce e incolli ognuna nel punto indicato, come se stessi completando un disegno.</p>
+        <p>Ogni opera del corso segue lo stesso procedimento. Dopo la prima, <strong>le successive diventano sempre più facili</strong>. Tante alunne non avevano mai fatto nessun lavoro manuale prima.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COSA C'È DENTRO (mockup app) ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label"><svg class="ic"><use href="#i-coil"/></svg>Cosa c'è dentro</div>
+      <h2>Tutto in un unico posto, <em class="it">sul tuo telefono</em></h2>
+    </div>
+    <div class="app">
+      <div class="app-top"><img decoding="async" src="assets/larissa.webp" alt="" width="40" height="40"><div><b>Universo del Quilling</b><span>con Larissa Nakamura</span></div></div>
+      <div class="app-row"><div class="app-ico"><svg class="ic"><use href="#i-play"/></svg></div><div><h3>10 videolezioni passo passo</h3><p>Mi vedi realizzare ogni opera, dal primo rotolino alla rifinitura, e la fai insieme a me.</p></div></div>
+      <div class="app-row"><div class="app-ico"><svg class="ic"><use href="#i-frame"/></svg></div><div><h3>Opere per tutti i gusti</h3><p>Quadretti decorativi e religiosi, fiori, biglietti, inviti, portachiavi, accessori e bomboniere.</p></div></div>
+      <div class="app-row"><div class="app-ico"><svg class="ic"><use href="#i-clock"/></svg></div><div><h3>Piano nell'app <span class="tag-c">Completo</span></h3><p>Le lezioni organizzate in base al tempo che hai ogni giorno.</p></div></div>
+      <div class="app-row"><div class="app-ico"><svg class="ic"><use href="#i-palette"/></svg></div><div><h3>Idee e ispirazioni <span class="tag-c">Completo</span></h3><p>Abbinamenti di colori e modelli per non restare mai senza sapere cosa creare.</p></div></div>
+      <div class="app-row"><div class="app-ico"><svg class="ic"><use href="#i-euro"/></svg></div><div><h3>Extra: per chi vuole vendere <span class="tag-c">Completo</span></h3><p>Come calcolare il prezzo, dove farti conoscere, come vendere sui social e nei marketplace, come organizzare la produzione.</p></div></div>
+      <div class="app-row"><div class="app-ico"><svg class="ic"><use href="#i-inf"/></svg></div><div><h3>Accesso a vita <span class="tag-c">Completo</span></h3><p>Guarda le lezioni quando vuoi e quante volte vuoi, per sempre.</p></div></div>
+    </div>
+    <div class="mt"><a href="#offerta" class="btn">Voglio il mio accesso</a></div>
+  </div>
+</section>
+
+<!-- ============ MATERIALE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label"><svg class="ic"><use href="#i-coil"/></svg>E il materiale?</div>
+      <h2>Meno di <em class="it">40 centesimi</em> a opera</h2>
+      <p>Un kit completo su Amazon ha già tutto: 900 strisce e gli attrezzi.</p>
+    </div>
+
+    <div class="browser">
+      <div class="browser-bar"><span></span><span></span><span></span><div class="browser-url"><svg class="ic"><use href="#i-lock"/></svg>amazon.it</div></div>
+      <img decoding="async" src="assets/kit-titolo.webp" alt="TUPARKA 19 Pcs Quilling Carta Kit, 45 colori, 900 strisce, 4,5 stelle, 32,92 €" width="560" height="200" loading="lazy">
+      <img decoding="async" src="assets/kit-foto.webp" alt="Contenuto del kit: strisce colorate, attrezzi, forbici, pinzette, tavole per le forme" width="520" height="500" loading="lazy">
+    </div>
+
+    <p class="calc-line">32,92 € ÷ circa 90 opere = <b>0,37 € a opera</b></p>
+    <p class="small muted center">Prezzo rilevato su Amazon.it, novembre 2026.</p>
+  </div>
+</section>
+
+<!-- ============ NATALE ============ -->
+<section class="dark">
+  <div class="wrap wide xmas">
+    <div class="center" style="max-width:620px;margin:0 auto">
+      <div class="label"><svg class="ic"><use href="#i-gift"/></svg>Natale è dietro l'angolo</div>
+      <h2>Quest'anno i regali <em class="it">li fai tu</em></h2>
+      <p class="mt" style="color:#d8c8bb">Decorazioni per l'albero, biglietti d'auguri, quadretti con il nome e piccoli regali fatti a mano per chi ami. E dopo le feste: bomboniere per battesimi, comunioni e matrimoni.</p>
+      <p class="mt">Regali che nessuno troverà in un negozio, perché li hai creati <strong>con le tue mani</strong>.</p>
+      <div class="mt"><a href="#offerta" class="btn pulse">Voglio iniziare prima di Natale</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIANZE ============ -->
+<!-- SUBSTITUIR/COMPLEMENTAR por depoimentos de alunas italianas quando estiverem disponíveis -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label"><svg class="ic"><use href="#i-coil"/></svg>Cosa dicono le alunne</div>
+      <h2>Non devi crederci <em class="it">sulla parola</em></h2>
+    </div>
+    <div class="tests collapsed" id="tests">
+      <div class="test"><p>Non avevo mai fatto Quilling e pensavo fosse difficilissimo. Seguendo il passo passo, ho fatto la mia prima opera il terzo giorno. Larissa mostra ogni dettaglio nei video.</p>
+        <div class="test-top"><img decoding="async" src="assets/dep-ivanilde.webp" alt="" width="42" height="42" loading="lazy"><div><div class="test-name">Ivanilde F.</div><div class="stars" data-stars></div></div></div></div>
+      <div class="test"><p>Il metodo dei modelli semplifica tantissimo. Pensavo che mi sarei persa, ma con le videolezioni è molto più facile imparare. L'ho consigliato a tutte le mie amiche!</p>
+        <div class="test-top"><img decoding="async" src="assets/dep-marcela.webp" alt="" width="42" height="42" loading="lazy"><div><div class="test-name">Marcela B.</div><div class="stars" data-stars></div></div></div></div>
+      <div class="test"><p>Ho fatto due quadretti: il primo l'ho tenuto per me, il secondo l'ho venduto dopo 9 giorni. L'ho pubblicato su Instagram e in tanti mi hanno chiesto di comprarlo!</p>
+        <div class="test-top"><img decoding="async" src="assets/dep-lucimara.webp" alt="" width="42" height="42" loading="lazy"><div><div class="test-name">Lucimara M.</div><div class="stars" data-stars></div></div></div></div>
+      <div class="test"><p>Adoro l'artigianato, ma per il Quilling ho una passione speciale. Ogni opera è unica e in circa un'ora vedi già il risultato finale. Adoro questa velocità!</p>
+        <div class="test-top"><img decoding="async" src="assets/dep-debora.webp" alt="" width="42" height="42" loading="lazy"><div><div class="test-name">Débora M.</div><div class="stars" data-stars></div></div></div></div>
+      <div class="test"><p>Volevo un lavoro manuale diverso dal solito e ho scoperto la filigrana di carta. È rilassante, facile e le opere vengono semplicemente BELLISSIME!</p>
+        <div class="test-top"><img decoding="async" src="assets/dep-juliana.webp" alt="" width="42" height="42" loading="lazy"><div><div class="test-name">Juliana N.</div><div class="stars" data-stars></div></div></div></div>
+      <div class="test"><p>Larissa va dritta al punto, senza giri di parole. La guardi fare ogni passaggio nel video e tu lo rifai uguale. Davvero semplicissimo.</p>
+        <div class="test-top"><img decoding="async" src="assets/dep-luana.webp" alt="" width="42" height="42" loading="lazy"><div><div class="test-name">Luana M.</div><div class="stars" data-stars></div></div></div></div>
+    </div>
+    <button type="button" class="more-btn" id="moreTests">Mostra altre recensioni</button>
+    <p class="small muted center mt">Testimonianze di alunne della prima edizione del corso, tradotte in italiano. I risultati variano da persona a persona e non c'è garanzia di vendite o guadagni.</p>
+  </div>
+</section>
+
+<!-- ============ BONUS ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label"><svg class="ic"><use href="#i-gift"/></svg>Solo nel Pacchetto Completo</div>
+      <h2>Se entri oggi, ricevi <em class="it">4 bonus in regalo</em></h2>
+    </div>
+    <div class="bonus-list">
+      <div class="bonus"><div class="bonus-side"><svg class="ic"><use href="#i-template"/></svg>BONUS 1</div><div class="bonus-body"><h3>50 modelli pronti da stampare</h3><p>Stampi e inizi subito a fare pratica, senza dover disegnare niente.</p><div class="bonus-val"><s>Valore 27 €</s> · <b>GRATIS oggi</b></div></div></div>
+      <div class="bonus"><div class="bonus-side"><svg class="ic"><use href="#i-chat"/></svg>BONUS 2</div><div class="bonus-body"><h3>Assistente per i dubbi 24h</h3><p>Ti sei bloccata in un passaggio? Chiedi a qualsiasi ora e ricevi subito l'indicazione.</p><div class="bonus-val"><s>Valore 37 €</s> · <b>GRATIS oggi</b></div></div></div>
+      <div class="bonus"><div class="bonus-side"><svg class="ic"><use href="#i-calc"/></svg>BONUS 3</div><div class="bonus-body"><h3>Calcolatrice dei prezzi</h3><p>Inserisci i tuoi costi e ti mostra quanto chiedere per ogni opera, senza rimetterci.</p><div class="bonus-val"><s>Valore 19 €</s> · <b>GRATIS oggi</b></div></div></div>
+      <div class="bonus"><div class="bonus-side"><svg class="ic"><use href="#i-shop"/></svg>BONUS 4</div><div class="bonus-body"><h3>Lista dei fornitori</h3><p>Dove comprare materiale di qualità, in sicurezza e spendendo meno.</p><div class="bonus-val"><s>Valore 17 €</s> · <b>GRATIS oggi</b></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFERTA ============ -->
+<section id="offerta" class="alt">
+  <div class="wrap wide">
+    <div class="sec-head">
+      <div class="label"><svg class="ic"><use href="#i-coil"/></svg>Scegli il tuo pacchetto</div>
+      <h2>Inizia oggi, con il <em class="it">prezzo di lancio</em></h2>
+      <p>L'offerta scade tra <b id="timer2" style="color:var(--wine);font-variant-numeric:tabular-nums">--:--:--</b></p>
+    </div>
+    <div class="plans">
+      <!-- BASE -->
+      <div class="plan">
+        <div class="plan-name">Pacchetto Base</div>
+        <h3>Solo le lezioni</h3>
+        <div class="plan-img"><img decoding="async" src="assets/planobase.webp" alt="Pacchetto Base: 10 videolezioni di Quilling" width="800" height="800" loading="lazy"></div>
+        <div class="plan-price"><span class="amt">9<sup>€</sup></span></div>
+        <p class="plan-note">Pagamento unico</p>
+        <ul>
+          <li><svg class="ic"><use href="#i-check"/></svg>10 videolezioni passo passo</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Metodo con modelli</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Accesso per 6 mesi</li>
+          <li class="no"><svg class="ic"><use href="#i-x"/></svg>Piano nell'app</li>
+          <li class="no"><svg class="ic"><use href="#i-x"/></svg>Idee e ispirazioni</li>
+          <li class="no"><svg class="ic"><use href="#i-x"/></svg>Extra: per chi vuole vendere</li>
+          <li class="no"><svg class="ic"><use href="#i-x"/></svg>4 bonus (50 modelli, assistente 24h, calcolatrice, fornitori)</li>
+          <li class="no"><svg class="ic"><use href="#i-x"/></svg>Accesso a vita</li>
+        </ul>
+        <a href="#" class="btn ghost" id="buyBase">Scelgo il Pacchetto Base</a>
+      </div>
+      <!-- COMPLETO -->
+      <div class="plan best">
+        <div class="plan-badge">IL PIÙ SCELTO</div>
+        <div class="plan-name">Pacchetto Completo</div>
+        <h3>Tutto l'Universo del Quilling</h3>
+        <div class="plan-img"><img decoding="async" src="assets/planocompleto.webp" alt="Pacchetto Completo: videolezioni, piano nell'app e 4 bonus" width="800" height="800" loading="lazy"></div>
+        <div class="plan-price"><s>221 €</s><span class="amt">19<sup>€</sup></span></div>
+        <p class="plan-note">Pagamento unico · nessun abbonamento</p>
+        <ul>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><strong>10 videolezioni passo passo</strong></span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Metodo con modelli</li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><strong>Piano nell'app</strong> in base al tuo tempo</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Idee e ispirazioni di colori e modelli</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Extra: per chi vuole vendere</li>
+          <li class="gift"><svg class="ic"><use href="#i-gift"/></svg>Bonus 1: 50 modelli pronti da stampare</li>
+          <li class="gift"><svg class="ic"><use href="#i-gift"/></svg>Bonus 2: Assistente per i dubbi 24h</li>
+          <li class="gift"><svg class="ic"><use href="#i-gift"/></svg>Bonus 3: Calcolatrice dei prezzi</li>
+          <li class="gift"><svg class="ic"><use href="#i-gift"/></svg>Bonus 4: Lista dei fornitori</li>
+          <li><svg class="ic"><use href="#i-check"/></svg><strong>Accesso a vita</strong></li>
+        </ul>
+        <div class="save">Per <strong>soli 10 € in più</strong> ricevi i 4 bonus, il piano nell'app e l'accesso a vita.</div>
+        <a href="#" class="btn pulse" data-checkout="completo">Voglio il Pacchetto Completo<small>Accesso immediato via e-mail</small></a>
+        <div class="secure"><svg class="ic"><use href="#i-lock"/></svg>Pagamento sicuro e crittografato · Carta o PayPal</div>
+      </div>
+    </div>
+    <div class="deliver wrap" style="padding:0">
+      <div><svg class="ic"><use href="#i-mail"/></svg>Ricevi l'accesso via e-mail</div>
+      <div><svg class="ic"><use href="#i-phone"/></svg>Entri dal telefono o dal computer</div>
+      <div><svg class="ic"><use href="#i-play"/></svg>Inizi la prima lezione oggi</div>
+    </div>
+    <p class="small muted center mt">Il prezzo finale e le condizioni vengono mostrati al checkout prima della conferma del pagamento.</p>
+  </div>
+</section>
+
+<!-- ============ GARANZIA ============ -->
+<section>
+  <div class="wrap guar">
+    <div class="seal" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <defs><path id="ring" d="M100 100m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0"/></defs>
+        <circle cx="100" cy="100" r="96" fill="#E9B23A"/>
+        <circle cx="100" cy="100" r="62" fill="#FFF6DC"/>
+        <g class="seal-ring"><text font-family="Inter" font-weight="800" font-size="14" fill="#3b2a00"><textPath href="#ring" textLength="486" lengthAdjust="spacing">SODDISFATTI O RIMBORSATI · GARANZIA TOTALE · </textPath></text></g>
+        <text x="100" y="108" text-anchor="middle" font-family="Fraunces" font-weight="800" font-size="52" fill="#3b2a00">30</text>
+        <text x="100" y="132" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" letter-spacing="2" fill="#3b2a00">GIORNI</text>
+      </svg>
+    </div>
+    <h2>Rischio <em class="it">zero</em> per te</h2>
+    <p>Entra, guarda le lezioni e prova a creare le tue prime opere per <strong>30 giorni interi</strong>. Se senti che il corso non fa per te, chiedi il rimborso entro il termine e ti restituiamo il <strong>100%</strong>. Senza domande, senza burocrazia.</p>
+    <a href="#offerta" class="btn">Voglio provare senza rischi</a>
+  </div>
+</section>
+
+<!-- ============ AUTRICE ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="author-photo"><img decoding="async" src="assets/larissa.webp" alt="Larissa Nakamura" loading="lazy" width="440" height="440"></div>
+    <div class="center"><div class="label"><svg class="ic"><use href="#i-coil"/></svg>La tua insegnante</div><h2>Piacere, sono <em class="it">Larissa Nakamura</em></h2><p class="muted mt"><strong>Creatrice dell'Universo del Quilling</strong></p></div>
+    <div class="prose mt">
+      <p>Ho scoperto il Quilling quasi per caso: con strisce di carta e un po' di pazienza sono riuscita a creare opere che sembravano fatte da una professionista. Me ne sono innamorata e da allora non mi sono più fermata.</p>
+      <p>Dal 2018 vivo di Quilling e ho già insegnato a <strong>più di 3.000 alunne</strong>. Ho creato questo corso per mostrarti la strada che avrei voluto avere io all'inizio: semplice e con ogni dettaglio mostrato in video.</p>
+      <p class="sign">Larissa</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap faq">
+    <div class="sec-head"><div class="label"><svg class="ic"><use href="#i-coil"/></svg>Domande frequenti</div><h2>Hai ancora qualche <em class="it">dubbio?</em></h2></div>
+    <details><summary>Va bene anche se non ho mai fatto lavori manuali?</summary><p>Sì. Il corso è pensato proprio per chi parte da zero. Con il metodo dei modelli incolli ogni striscia nel punto indicato, e la prima opera ti guida passo passo.</p></details>
+    <details><summary>Le lezioni sono in italiano?</summary><p>Sì, tutte le videolezioni sono in italiano.</p></details>
+    <details><summary>Come ricevo l'accesso?</summary><p>Subito dopo la conferma del pagamento ricevi un'e-mail con il link e i dati per entrare nel corso. Controlla anche la cartella spam o promozioni.</p></details>
+    <details><summary>Che materiale serve e quanto costa?</summary><p>Strisce di carta per Quilling, colla vinilica, uno stuzzicadenti o un attrezzo per arrotolare e delle forbici. Un kit completo con 900 strisce e attrezzi si trova su Amazon a circa 30 € e basta per circa 90 opere: meno di 40 centesimi a opera.</p></details>
+    <details><summary>Posso seguire il corso dal telefono?</summary><p>Sì. Puoi guardare le lezioni da smartphone, tablet o computer, quando vuoi.</p></details>
+    <details><summary>Posso vendere le opere che creo?</summary><p>Sì, le opere che realizzi sono tue. Nel Pacchetto Completo trovi anche l'extra con consigli su prezzi e vendita. I risultati variano da persona a persona e non garantiamo vendite o guadagni.</p></details>
+    <details><summary>Come funziona la garanzia?</summary><p>Hai 30 giorni per provare il corso. Se non fa per te, chiedi il rimborso entro il termine e ti restituiamo il 100% di quanto pagato.</p></details>
+  </div>
+</section>
+
+<!-- ============ CTA FINALE ============ -->
+<section class="dark">
+  <div class="strips" style="position:absolute;top:0;left:0;right:0"></div>
+  <div class="wrap center">
+    <h2>La tua prima opera può essere pronta <em class="it">questa settimana</em></h2>
+    <ul class="recap">
+      <li><svg class="ic"><use href="#i-check"/></svg>10 videolezioni in italiano, passo passo</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Metodo con modelli, anche da zero</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Piano nell'app, idee ed extra per vendere</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>4 bonus in regalo</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Accesso a vita · pagamento unico</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Garanzia di 30 giorni</li>
+    </ul>
+    <a href="#" class="btn pulse" data-checkout="completo">Sì, voglio il Pacchetto Completo a 19 €</a>
+    <p class="small mt" style="color:#d8c8bb">Prezzo di lancio valido fino a mezzanotte · scade tra <b id="timer3">--:--:--</b></p>
+  </div>
+</section>
+<div class="strips"></div>
+
+<footer>
+  <div class="wrap">
+    <nav><a href="#">Termini e condizioni</a><a href="#">Informativa sulla privacy</a><a href="#">Diritto di recesso</a></nav>
+    <p>Prodotto 100% digitale: non viene spedito alcun articolo fisico. Pagamento unico, nessun abbonamento.</p>
+    <p>I risultati variano da persona a persona. Non garantiamo vendite o guadagni.</p>
+    <p>Questo sito non fa parte di Meta Platforms, Inc. né è approvato da Meta. Facebook e Instagram sono marchi registrati di Meta Platforms, Inc.</p>
+    <p>© <span id="year">2026</span> Universo del Quilling · Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY CTA (mobile) ============ -->
+<div class="sticky" id="sticky"><a href="#offerta" class="btn">Voglio iniziare · solo 19 €</a></div>
+
+<!-- ============ LIGHTBOX GALLERIA ============ -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galleria opere">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Chiudi"><svg class="ic"><use href="#i-close"/></svg></button>
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Precedente"><svg class="ic"><use href="#i-left"/></svg></button>
+  <img decoding="async" class="lb-img" id="lbImg" alt="">
+  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Successiva"><svg class="ic"><use href="#i-right"/></svg></button>
+  <div class="lb-cap" id="lbCap"></div>
+  <div class="lb-count" id="lbCount"></div>
+  <a href="#offerta" class="btn" id="lbCta">Voglio imparare a crearla</a>
+</div>
+
+<!-- ============ DOWNSELL MODAL ============ -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-box">
+    <div class="strips"></div>
+    <img decoding="async" class="modal-img" src="assets/planocompleto.webp" alt="Pacchetto Completo con 4 bonus" width="800" height="800" loading="lazy">
+    <h3 id="mTitle">Aspetta! Per soli <em class="it">10 € in più</em>…</h3>
+    <p class="muted">Con il Pacchetto Completo, oltre alle 10 videolezioni, ricevi anche:</p>
+    <ul>
+      <li><svg class="ic"><use href="#i-template"/></svg>50 modelli pronti da stampare</li>
+      <li><svg class="ic"><use href="#i-chat"/></svg>Assistente per i dubbi 24h</li>
+      <li><svg class="ic"><use href="#i-calc"/></svg>Calcolatrice dei prezzi e lista fornitori</li>
+      <li><svg class="ic"><use href="#i-palette"/></svg>Piano nell'app, idee ed extra per vendere</li>
+      <li><svg class="ic"><use href="#i-inf"/></svg>Accesso a vita (invece di 6 mesi)</li>
+    </ul>
+    <a href="#" class="btn pulse" data-checkout="completo">Sì, voglio il Completo a 19 €</a>
+    <a href="#" class="btn ghost" data-checkout="base">No grazie, continuo con il Base a 9 €</a>
+  </div>
+</div>
+
+<script>
+/* ===== LINKS DE CHECKOUT: colar aqui ===== */
+var CHECKOUT = {
+  completo: "#CHECKOUT_COMPLETO_19",
+  base: "#CHECKOUT_BASE_9"
+};
+
+/* ===== GALERIA DE PEÇAS: para adicionar uma imagem, coloque o arquivo em assets/ e acrescente uma linha aqui.
+   Qualquer proporção funciona (a imagem aparece inteira). "label" é a legenda mostrada na foto. ===== */
+var GALLERY = [
+  {src: "assets/peca-02.webp", label: "Quadretto con nome"},
+  {src: "assets/peca-03.webp", label: "Lettera decorata"},
+  {src: "assets/peca-06.webp", label: "Gufo decorativo"},
+  {src: "assets/peca-08.webp", label: "Portachiavi"},
+  {src: "assets/etapa4.webp", label: "Stella di Natale"},
+  {src: "assets/peca-01.webp", label: "Quadretto religioso"},
+  {src: "assets/peca-07.webp", label: "Nome con farfalle"},
+  {src: "assets/peca-04.webp", label: "Tartaruga decorativa"},
+  {src: "assets/peca-10.webp", label: "Lettere decorate"},
+  {src: "assets/peca-05.webp", label: "Iniziale in cornice"},
+  {src: "assets/peca-09.webp", label: "Portachiavi uva"}
+];
+
+(function(){
+  // Links de checkout (mantém UTMs da URL)
+  var qs = location.search.replace(/^\?/, "");
+  function link(key){
+    var u = CHECKOUT[key];
+    if (!qs || u.charAt(0) === "#") return u;
+    return u + (u.indexOf("?") > -1 ? "&" : "?") + qs;
+  }
+  document.querySelectorAll("[data-checkout]").forEach(function(a){ a.href = link(a.getAttribute("data-checkout")); });
+
+  // Estrelas dos depoimentos
+  document.querySelectorAll("[data-stars]").forEach(function(el){
+    el.innerHTML = new Array(6).join('<svg class="ic"><use href="#i-star"/></svg>');
+  });
+
+  // Modal de downsell no botão Base
+  var modal = document.getElementById("modal");
+  document.getElementById("buyBase").addEventListener("click", function(e){ e.preventDefault(); modal.classList.add("open"); });
+  modal.addEventListener("click", function(e){ if (e.target === modal) modal.classList.remove("open"); });
+
+  // Data de hoje em italiano
+  var d = new Date();
+  var giorni = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"];
+  var mesi = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+  document.querySelectorAll("[data-today]").forEach(function(el){ el.textContent = giorni[d.getDay()] + " " + d.getDate() + " " + mesi[d.getMonth()]; });
+  document.getElementById("year").textContent = d.getFullYear();
+
+  // Cronômetro até a meia-noite
+  var timers = ["timer","timer2","timer3"].map(function(id){ return document.getElementById(id); });
+  function pad(n){ return (n < 10 ? "0" : "") + n; }
+  function tick(){
+    var now = new Date(), end = new Date(now); end.setHours(24,0,0,0);
+    var s = Math.max(0, Math.floor((end - now) / 1000));
+    var t = pad(Math.floor(s/3600)) + ":" + pad(Math.floor(s%3600/60)) + ":" + pad(s%60);
+    timers.forEach(function(el){ if (el) el.textContent = t; });
+  }
+  tick(); setInterval(tick, 1000);
+
+  // CTA fixo depois do hero
+  var sticky = document.getElementById("sticky"), hero = document.querySelector(".hero"), offer = document.getElementById("offerta");
+  function onScroll(){
+    var pastHero = window.scrollY > hero.offsetTop + hero.offsetHeight - 100;
+    var r = offer.getBoundingClientRect(), inOffer = r.top < innerHeight && r.bottom > 0;
+    sticky.classList.toggle("show", pastHero && !inOffer);
+  }
+  addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+  // ===== Vitrine: duas faixas em movimento contínuo =====
+  var half = Math.ceil(GALLERY.length / 2);
+  var rows = [GALLERY.slice(0, half), GALLERY.slice(half)];
+  if (!rows[1].length) rows[1] = GALLERY.slice();
+  ["mq1","mq2"].forEach(function(id, r){
+    var box = document.getElementById(id), track = box.firstElementChild, items = rows[r];
+    var offset = r === 0 ? 0 : half;
+    var seq = []; while (seq.length < 8) seq = seq.concat(items.map(function(it, j){ return {it: it, idx: (offset + j) % GALLERY.length}; }));
+    seq.concat(seq).forEach(function(s){
+      var f = document.createElement("figure"); f.className = "mq-item";
+      f.innerHTML = '<img src="' + s.it.src + '" alt="' + s.it.label + ' in Quilling" width="540" height="675" loading="lazy" decoding="async">' + (s.it.label ? '<figcaption>' + s.it.label + '</figcaption>' : '');
+      f.addEventListener("click", function(){ openLb(s.idx); });
+      track.appendChild(f);
+    });
+    track.style.setProperty("--dur", (seq.length * 6) + "s");
+    box.addEventListener("touchstart", function(){ box.classList.add("hold"); }, {passive:true});
+    box.addEventListener("touchend", function(){ setTimeout(function(){ box.classList.remove("hold"); }, 1500); }, {passive:true});
+  });
+
+  // Pausa a vitrine quando está fora da tela (economiza bateria e processamento)
+  if ("IntersectionObserver" in window) {
+    var mqIo = new IntersectionObserver(function(en){ en.forEach(function(e){ e.target.classList.toggle("off", !e.isIntersecting); }); });
+    document.querySelectorAll(".mq").forEach(function(m){ mqIo.observe(m); });
+  }
+
+  // ===== Lightbox =====
+  var lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg"), lbI = 0;
+  function showLb(i){
+    lbI = (i + GALLERY.length) % GALLERY.length; var it = GALLERY[lbI];
+    lbImg.src = it.src; lbImg.alt = it.label;
+    document.getElementById("lbCap").textContent = it.label;
+    document.getElementById("lbCount").textContent = (lbI + 1) + " / " + GALLERY.length;
+  }
+  function openLb(i){ showLb(i); lb.classList.add("open"); document.body.style.overflow = "hidden"; }
+  function closeLb(){ lb.classList.remove("open"); document.body.style.overflow = ""; }
+  document.getElementById("lbClose").addEventListener("click", closeLb);
+  document.getElementById("lbPrev").addEventListener("click", function(){ showLb(lbI - 1); });
+  document.getElementById("lbNext").addEventListener("click", function(){ showLb(lbI + 1); });
+  document.getElementById("lbCta").addEventListener("click", closeLb);
+  lb.addEventListener("click", function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener("keydown", function(e){
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") closeLb(); if (e.key === "ArrowLeft") showLb(lbI - 1); if (e.key === "ArrowRight") showLb(lbI + 1);
+  });
+  var tx = null;
+  lb.addEventListener("touchstart", function(e){ tx = e.touches[0].clientX; }, {passive:true});
+  lb.addEventListener("touchend", function(e){
+    if (tx === null) return; var dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 40) showLb(lbI + (dx < 0 ? 1 : -1));
+  }, {passive:true});
+
+  // ===== Pergunta interativa =====
+  var ANSWERS = {
+    natale: "Ottima scelta! Con il metodo dei modelli puoi creare alberelli, stelle e biglietti d'auguri già nei prossimi giorni, in tempo per Natale. Regali fatti a mano che nessuno troverà in un negozio.",
+    nomi: "Perfetto! Le lettere e i quadretti con il nome sono tra le opere più amate: dopo le prime lezioni sai già arrotolare e modellare le strisce per crearli.",
+    bomb: "Che bello! Con le stesse tecniche del corso crei biglietti e piccoli pensieri per battesimi, comunioni e matrimoni, tutti unici e spendendo pochissimo.",
+    relig: "Bellissimo! I quadretti religiosi sono opere che emozionano. Lavorando sopra il modello, incolli ogni striscia al suo posto e il risultato sembra quello di un'artista.",
+    fiori: "Splendido! I fiori sono il modo perfetto per iniziare: imparerai a modellare i petali uno a uno, come nella peonia del video, e a creare quadretti da appendere o regalare.",
+    vend: "Ottimo obiettivo! Nel Pacchetto Completo trovi l'extra per chi vuole vendere e la calcolatrice dei prezzi, per sapere quanto chiedere senza rimetterci. I risultati variano da persona a persona."
+  };
+  var pick = document.getElementById("pick");
+  pick.addEventListener("click", function(e){
+    var b = e.target.closest("button"); if (!b) return;
+    [].forEach.call(pick.children, function(x){ x.classList.toggle("on", x === b); });
+    document.getElementById("pickText").textContent = ANSWERS[b.getAttribute("data-k")];
+    var a = document.getElementById("pickAnswer"); a.hidden = false;
+    a.style.animation = "none"; a.offsetHeight; a.style.animation = "";
+    // rola sempre até a mensagem da autora, centralizada na tela
+    setTimeout(function(){
+      var r = a.getBoundingClientRect();
+      var y = window.scrollY + r.top - Math.max(16, (innerHeight - r.height) / 2);
+      window.scrollTo({top: y, behavior: "smooth"});
+    }, 120);
+  });
+
+  // ===== Depoimentos: mostrar mais =====
+  document.getElementById("moreTests").addEventListener("click", function(){
+    document.getElementById("tests").classList.remove("collapsed"); this.remove();
+  });
+
+  // ===== Animação de entrada ao rolar =====
+  if ("IntersectionObserver" in window) {
+    var els = document.querySelectorAll(".sec-head, .proc figure, .method, .pick, .pain li, .relief, .app, .mats > div, .xmas, .test, .bonus, .plan, .guar, .author-photo, .faq details");
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, {threshold: .12, rootMargin: "0px 0px -30px 0px"});
+    els.forEach(function(el){ el.classList.add("rv"); io.observe(el); });
+  }
+  // Vídeo do hero: carrega depois da página (o poster aparece na hora)
+  var hv = document.getElementById("heroVideo");
+  function loadHero(){ if (!hv || hv.src) return; hv.src = hv.getAttribute("data-src"); hv.load(); var p = hv.play(); if (p && p.catch) p.catch(function(){}); }
+  if (document.readyState === "complete") loadHero(); else addEventListener("load", loadHero);
+})();
+</script>
+</body>
+</html>
